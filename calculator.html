@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="div1">
+      
+        <form name="forms">
+          <input type="text" id="input1" disabled>
+
+          <div class="buttons">
+             <input type="button" id="seven" value="7" onclick="clicknum('7')">
+             <input type="button" id="eight" value="8" onclick="clicknum('8')">
+             <input type="button" id="nine" value="9" onclick="clicknum('9')">
+             <input type="button" id="divide" value="/" onclick="clicknum('/')"><br>
+             <input type="button" id="four" value="4" onclick="clicknum('4')">
+             <input type="button" id="five" value="5" onclick="clicknum('5')">
+             <input type="button" id="six" value="6" onclick="clicknum('6')">
+             <input type="button" id="multi" value="*" onclick="clicknum('*')"><br>
+             <input type="button" id="one" value="1" onclick="clicknum('1')">
+             <input type="button" id="two" value="2" onclick="clicknum('2')">
+             <input type="button" id="three" value="3" onclick="clicknum('3')">
+             <input type="button" id="subs" value="-" onclick="clicknum('-')"><br>
+             <input type="button" id="dot" value="del" onclick="deletenum()">
+             <input type="button" id="zero" value="0" onclick="clicknum('0')">
+             <input type="button" id="add" value="+" onclick="clicknum('+')">
+             <input type="button" id="clear" value="C" onclick="clearnum()" ><br>
+             <input type="button" id="equal" value="=" onclick="result()">
+          </div>
+       </form>
+    </div>
+    
+</body>
+<script>
+   function clicknum(num){
+     input1.value+=num
+   }
+   function clearnum(){
+    input1.value=''
+   }
+   function result(){
+    input1.value=eval(input1.value)
+   }
+   function deletenum(){
+    input1.value=input1.value.slice(0,-1)
+   }
+</script>
+</html>
